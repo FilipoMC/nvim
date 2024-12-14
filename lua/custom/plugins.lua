@@ -12,6 +12,31 @@ local plugins = {
   --   dependencies = {"nvim-lua/plenary.nvim"},
   --   opts = {}
   -- },
+--   {
+--     "wfxr/minimap.vim",
+--     event = "VeryLazy",
+--     config = function ()
+--        let g:minimap_width = 10
+-- let g:minimap_auto_start = 1
+-- let g:minimap_auto_start_win_enter = 1
+--     end
+--   },
+  -- {
+  --   'andweeb/presence.nvim',
+  --   event = "VeryLazy",
+  --   config = function ()
+  --     require("presence").setup();
+  --   end
+  -- },
+  {
+    "andweeb/presence.nvim",
+    lazy = false,
+    config = function()
+      require("presence").setup({
+        main_image = "file"
+      })
+    end
+  },
   {
     "windwp/nvim-ts-autotag",
     config = function ()
